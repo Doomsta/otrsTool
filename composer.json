@@ -1,0 +1,23 @@
+{
+    "name": "doomsta/otrs-tool",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre",
+            "email": "andreRandel2k7@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "kzykhys/git": "dev-master",
+        "symfony/console": "2.6.*@dev",
+        "symfony/filesystem": "dev-master",
+        "symfony/finder": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "OtrsTool\\": "src/"
+        }
+    }
+}
