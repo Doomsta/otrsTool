@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "95f5d2477566edfda514925e27db7c19",
+    "hash": "671be440e165ae933cec7f578c10a670",
     "packages": [
         {
             "name": "kzykhys/git",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "22b9311b16ec0081ad780ff1ae1da0a883fa59d3"
+                "reference": "fc7b5c7844aca65bccf094631be244c19047b48c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/22b9311b16ec0081ad780ff1ae1da0a883fa59d3",
-                "reference": "22b9311b16ec0081ad780ff1ae1da0a883fa59d3",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/fc7b5c7844aca65bccf094631be244c19047b48c",
+                "reference": "fc7b5c7844aca65bccf094631be244c19047b48c",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 08:01:59"
+            "time": "2015-01-03 15:33:07"
         },
         {
             "name": "symfony/filesystem",
@@ -116,12 +116,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "6510d9ae3e65d35cdaf4e6f5c1213db5396f432f"
+                "reference": "9e98e082d75e36d704f83c741443a526a41a3cfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/6510d9ae3e65d35cdaf4e6f5c1213db5396f432f",
-                "reference": "6510d9ae3e65d35cdaf4e6f5c1213db5396f432f",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/9e98e082d75e36d704f83c741443a526a41a3cfa",
+                "reference": "9e98e082d75e36d704f83c741443a526a41a3cfa",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +154,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 15:56:00"
+            "time": "2015-01-04 10:51:22"
         },
         {
             "name": "symfony/finder",

@@ -3,7 +3,7 @@
 require_once(__DIR__ . '/../vendor/autoload.php');
 use OtrsTool\Compiler;
 error_reporting(-1);
-echo sys_get_temp_dir();
+echo "start\n";
 ini_set('display_errors', 1);
 try {
     $compiler = new Compiler();

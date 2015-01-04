@@ -65,8 +65,6 @@ class Compiler
             $content = $this->stripWhitespace($content);
         } elseif ('LICENSE' === basename($file)) {
             $content = "\n".$content."\n";
-
-            echo $path;
         }
 
         $phar->addFromString($path, $content);
