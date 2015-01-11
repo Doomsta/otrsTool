@@ -1,6 +1,6 @@
 <?php
 
-namespace OtrsTool\Command;
+namespace OtrsTool\Command\Opm;
 
 use OtrsTool\Exception\SopmNotFoundException;
 use SimpleXMLElement;
@@ -11,16 +11,17 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Finder\Finder;
 
-class BuildOpmCommand extends Command
+class BuildCommand extends Command
 {
 
     protected function configure()
     {
-        $this->setName('build:opm');
+        $this->setName('opm:build');
         $this->addArgument(
             'source',
-            InputArgument::REQUIRED,
-            'path to *.sopm e.g. /home/user/CustomColors'
+            InputArgument::OPTIONAL,
+            'path to *.sopm e.g. /home/user/CustomColors',
+            '.'
         );
         $this->addArgument(
             'target',

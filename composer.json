@@ -13,7 +13,8 @@
         "kzykhys/git": "dev-master",
         "symfony/console": "2.6.*@dev",
         "symfony/filesystem": "dev-master",
-        "symfony/finder": "dev-master"
+        "symfony/finder": "dev-master",
+        "sebastian/diff": "*"
     },
     "autoload": {
         "psr-0": {

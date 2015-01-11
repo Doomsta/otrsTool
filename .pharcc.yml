@@ -1,0 +1,9 @@
+name: otrsTool.phar
+main: bin/otrsTool
+include:
+  - src/
+  - vendor/
+exclude:
+  - "/[Tt]ests?/"
+  - "Test\.php$"
+  - "/docs?/"

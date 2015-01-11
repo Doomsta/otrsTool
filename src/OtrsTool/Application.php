@@ -3,8 +3,12 @@
 
 namespace OtrsTool;
 
-use OtrsTool\Command\BuildOpmCommand;
-use OtrsTool\Command\BuildOpmFromGitCommand;
+use OtrsTool\Command\Opm\BuildFromGitCommand;
+use OtrsTool\Command\Opm\BuildCommand;
+use OtrsTool\Command\Package\CheckCommand;
+use OtrsTool\Command\Package\CompareWithOtrsCommand;
+use OtrsTool\Command\Repo\BuildIndexCommand;
+use OtrsTool\Command\Repo\ServeCommand;
 use Symfony\Component\Console\Application as BaseApplication;
 
 
@@ -31,8 +35,12 @@ class Application extends BaseApplication
     protected function getDefaultCommands()
     {
         $commands = parent::getDefaultCommands();
-        $commands[] = new BuildOpmCommand();
-        $commands[] = new BuildOpmFromGitCommand();
+        $commands[] = new BuildCommand();
+        $commands[] = new BuildFromGitCommand();
+        $commands[] = new CheckCommand();
+        $commands[] = new CompareWithOtrsCommand();
+        $commands[] = new ServeCommand();
+        $commands[] = new BuildIndexCommand();
         return $commands;
     }
 }

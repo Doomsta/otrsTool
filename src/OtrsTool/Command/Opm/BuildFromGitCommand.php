@@ -1,6 +1,6 @@
 <?php
 
-namespace OtrsTool\Command;
+namespace OtrsTool\Command\Opm;
 
 use PHPGit\Git;
 use Symfony\Component\Filesystem\Filesystem;
@@ -11,12 +11,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class BuildOpmFromGitCommand extends Command
+class BuildFromGitCommand extends Command
 {
 
     protected function configure()
     {
-        $this->setName('build:opmFromGit');
+        $this->setName('opm:buildFromGit');
         $this->addArgument(
             'source',
             InputArgument::REQUIRED,
@@ -63,7 +63,7 @@ class BuildOpmFromGitCommand extends Command
         }
 
         try {
-            $command = $this->getApplication()->find('build:opm');
+            $command = $this->getApplication()->find('opm:build');
             $arguments = array(
                 'source' => $workDir.'/'.$key,
                 'target' => $target,
