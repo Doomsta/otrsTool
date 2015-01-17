@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package_list version="1.0">
+{% for opm in opms %}
+    <Package>
+        <Name>{{ opm.name }}</Name>
+        <Version>{{ opm.version }}</Version>
+        <Vendor>{{ opm.vendor }}</Vendor>
+        <URL>{{ opm.url }}</URL>
+        <License>{{ opm.license }}</License>
+{% for desc in opm.descs %}
+        <Description Lang="{{ desc.lang }}">{{ desc.str }}</Description>
+{% endfor %}
+        <Framework>{{ opm.framework }}</Framework>
+        <Filelist>
+        </Filelist>
+        <File>{{ opm.path }}</File>
+    </Package>
+{% endfor %}
+</otrs_package_list>
