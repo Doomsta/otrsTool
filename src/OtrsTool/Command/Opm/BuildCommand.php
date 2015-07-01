@@ -42,14 +42,22 @@ class BuildCommand extends Command
         $output->writeln('found sopm');
 
         $sopm->BuildDate[0] = date('Y-m-d H:m:s');
-        $sopm->BuildHost[0] = $sopm->BuildHost[0] ?: gethostname();
+
+        if($sopm->BuildHost[0] === '?') {
+            $sopm->BuildHost[0] = gethostname();
+        }
+
         $sopm->Version = ($buildNumber !== null)? $sopm->Version.'.'.$buildNumber : $sopm->Version;
 
         foreach($sopm->Filelist->File as $file) {
             /** @var $file SimpleXMLElement */
             $file['Encode'] = "Base64";
             $output->writeln('read otrs/'.$file['Location']);
-            $file[0] = base64_encode(file_get_contents($source.'/otrs/'.$file['Location']));
+            if ($content = file_get_contents($source.'/otrs/'.$file['Location'])) {
+                $file[0] = base64_encode($content);
+            } else {
+                throw new \Exception('File '.$file['Location'].' not found');
+            }
         }
         $target .= '/'.$sopm->Name.'-'.$sopm->Version.'.opm';
         $output->writeln('try to write '. $target);
